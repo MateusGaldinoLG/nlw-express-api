@@ -20,4 +20,8 @@ Depois de clonado, baixe os packages e rode utilizando o comando:
     npm run dev
 ```
 
-E acesse em: <http://localhost:3000/test>
+E acesse em: <http://localhost:3000/users>
+
+## Anotações
+
+Para ver minhas anotações só abrir o arquivo notion.md
