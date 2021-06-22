@@ -7,3 +7,17 @@ Esse projeto utiliza como stack:
 * Typescript
 * Expressjs (e @types/express)
 * Outras packages de desenvolvimento como: ts-node-dev
+* Uso de TypeORM para conexão com um banco de dados PostgreSQL
+* Uso da biblioteca uuid para a criação de ids com uuid (e @types/uuid)
+
+## Como rodar o projeto
+
+Clone o projeto utilizando o link:  
+Depois de clonado, baixe os packages e rode utilizando o comando:  
+
+```bash
+    npm install
+    npm run dev
+```
+
+E acesse em: <http://localhost:3000/test>
