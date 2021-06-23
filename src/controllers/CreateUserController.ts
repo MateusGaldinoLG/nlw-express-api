@@ -16,7 +16,7 @@ class CreateUserController{
         //     const user = await createUserService.execute({name, email, admin});
         //     return response.json(user);
         // }catch(Error){
-        //     return response.sendStatus(400)
+        //     return response.status(400).json({error: err.message});
         // }
     }
 

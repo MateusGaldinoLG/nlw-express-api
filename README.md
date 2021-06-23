@@ -12,7 +12,7 @@ Esse projeto utiliza como stack:
 
 ## Como rodar o projeto
 
-Clone o projeto utilizando o link:  
+Clone o projeto utilizando o link: <https://github.com/MateusGaldinoLG/nlw-express-api.git>  
 Depois de clonado, baixe os packages e rode utilizando o comando:  
 
 ```bash

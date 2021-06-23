@@ -68,12 +68,12 @@ Para criar uma entity é usado  o comando: **ts-node-dev ./node_modules/typeorm/
 #### Regras
 
 - Cadastro de usuário  
-[ ] Não é permitido cadastrar mais de um usuário com o mesmo e-mail  
-[ ] Não é permitido cadastrar usuário sem e-mail
+[ x ] Não é permitido cadastrar mais de um usuário com o mesmo e-mail  
+[ x ] Não é permitido cadastrar usuário sem e-mail
 - Cadastro de TAG  
-[ ] Não é permitido cadastrar mais de uma tag no mesmo usuário  
-[ ] Não é permitido cadastrar tag sem nome  
-[ ] Não é permitido o cadastro por   usuários que não sejam administradores
+[ x ] Não é permitido cadastrar tag sem nome  
+[ x ] Não é permitido cadastrar mais de uma tag no mesmo usuário  
+[ x ] Não é permitido o cadastro por usuários que não sejam administradores
 - Cadastro de elogios  
 [ ] Não é permitido um usuário cadastrar um elogio para si  
 [ ] Não é permitido cadastrar elogios para usuários invalidos  
@@ -94,7 +94,16 @@ Ele pega o corpo da request, chama o Service para desenvolver a camada de Banco 
 
 server -> controller -> SERVICE -> Repositories -> BD
 
+## Excessão
+
+Quando lançamos(throw) uma excessão, a camada superior à da excessão precisa tratar de alguma forma essa excessão.
+
+## Middlewares
+
+Etapa intermediaria entre a request e a response, podendo interceptar a informação.
+
 ## Tips
 
 - quando é importado uma pasta, o javascript entende que o que quer ser importado será o index.js
 - #Unidade
+- #embuscadeevolução
