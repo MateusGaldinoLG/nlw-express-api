@@ -160,3 +160,4 @@ Não é interessante passar informações sensíveis dentro do Payload do token
 - Para hash: d0b78b92-76c6-4ff8-ad2c-426665a10b19
 - #Unidade
 - #embuscadeevolução
+- #legacy
