@@ -4,6 +4,9 @@ import { sign } from "jsonwebtoken";
 
 import { UserRepositories } from "../repositories/UserRepositories"
 
+import {tokenKey} from "../JWTKey"
+
+const JWTKey = tokenKey;
 
 interface IAuthenticateRequest{
     email: string;
@@ -37,7 +40,7 @@ class AuthenticateUserService{
 
         const token: string = sign({
             email: user.email
-        }, "8950aadffc5e56c991c6a70f2936988e", {
+        }, JWTKey!, {
             subject: user.id,
             expiresIn: "1d" 
         });
