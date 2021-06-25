@@ -9,6 +9,8 @@ Esse projeto utiliza como stack:
 * Outras packages de desenvolvimento como: ts-node-dev
 * Uso de TypeORM para conexão com um banco de dados PostgreSQL
 * Uso da biblioteca uuid para a criação de ids com uuid (e @types/uuid)
+* Uso de bcryptjs para gerar hashs em campos sensíveis como senhas
+* Uso de JWT com a biblioteca jsonwebtoken
 
 ## Como rodar o projeto
 
@@ -20,7 +22,20 @@ Depois de clonado, baixe os packages e rode utilizando o comando:
     npm run dev
 ```
 
-E acesse em: <http://localhost:3000/users>
+E acesse em: <http://localhost:3000/...>
+
+as URLs para GET são (usando um token de JWT):
+
+* /users/compliments/send
+* /users/compliments/received
+* /tags
+
+as URLs para POST são:
+
+* /users
+* /tags
+* /login
+* /compliments
 
 ## Anotações
 

@@ -106,9 +106,9 @@ public async up(queryRunner: QueryRunner): Promise<void> {
 [ x ] Não é permitido cadastrar mais de uma tag no mesmo usuário  
 [ x ] Não é permitido o cadastro por usuários que não sejam administradores
 - Cadastro de elogios  
-[ ] Não é permitido um usuário cadastrar um elogio para si  
-[ ] Não é permitido cadastrar elogios para usuários invalidos  
-[ ] O usuário precisa estar autenticado na aplicação  
+[ x ] Não é permitido um usuário cadastrar um elogio para si  
+[ x ] Não é permitido cadastrar elogios para usuários invalidos  
+[ x ] O usuário precisa estar autenticado na aplicação  
 
 -----------------------
 
@@ -157,7 +157,9 @@ Não é interessante passar informações sensíveis dentro do Payload do token
 
 - quando é importado uma pasta, o javascript entende que o que quer ser importado será o index.js
 - Em um banco de dados, é importante manter dados sensíveis como senhas criptografados, para isso, existe o bcryptjs
+- O metodo class-transformer é muito útil quando se quer esconder ou adicionar informações dentro de classes de Entity
 - Para hash: d0b78b92-76c6-4ff8-ad2c-426665a10b19
 - #Unidade
 - #embuscadeevolução
 - #legacy
+- Juntos no próximo nível

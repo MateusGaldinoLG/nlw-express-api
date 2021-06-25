@@ -1,0 +1,150 @@
+POST http://localhost:3000/users HTTP/1.1
+Content-type: application/json
+
+{
+    "name": "Mateus ",
+    "email": "mateus@gmail.com",
+    "password": "12345",
+    "admin": true
+}
+
+###
+
+POST http://localhost:3000/users HTTP/1.1
+Content-type: application/json
+
+{
+    "name": "Administrador",
+    "email": "admin@admin.com",
+    "password": "4321",
+    "admin": true
+}
+
+###
+
+POST http://localhost:3000/tags HTTP/1.1
+Content-type: application/json
+
+{
+    "name": "Inspiração"
+}
+
+###
+
+POST http://localhost:3000/tags HTTP/1.1
+Content-type: application/json
+
+{
+    "name": "Liderança"
+}
+
+###
+
+#Rest request
+POST http://localhost:3000/login HTTP/1.1
+Content-type: application/json
+
+{
+    "email": "mateus@gmail.com",
+    "password": "12345"
+}
+
+###
+
+#Create Compliment
+
+POST http://localhost:3000/compliments HTTP/1.1
+Content-type: application/json
+
+{
+    "tag_id": "e94366ae-618a-4f3e-a21e-e67780b9c4bf",
+    "user_sender": "d0b78b92-76c6-4ff8-ad2c-426665a10b19",
+    "user_receiver": "583acde7-1511-4c47-8e1f-833c53ef8188",
+    "message": "Obrigado pela ajuda na comunidade :)"
+}
+
+###
+
+#Create Compliment errors
+
+POST http://localhost:3000/compliments HTTP/1.1
+Content-type: application/json
+
+{
+    "tag_id": "e94366ae-618a-4f3e-a21e-e67780b9c4bf",
+    "user_sender": "d0b78b92-76c6-4ff8-ad2c-426665a10b19",
+    "user_receiver": "d0b78b92-76c6-4ff8-ad2c-426665a10b29",
+    "message": "Obrigado pela ajuda na comunidade :)"
+}
+
+###
+#Bare token
+
+POST http://localhost:3000/tags HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hdGV1c0BnbWFpbC5jb20iLCJpYXQiOjE2MjQ2NDIwNTAsImV4cCI6MTYyNDcyODQ1MCwic3ViIjoiZDBiNzhiOTItNzZjNi00ZmY4LWFkMmMtNDI2NjY1YTEwYjE5In0.XP4v8bBOrKQ2CwCxqdvN43WC2xbAJ5GJSwRC-3brN-M
+
+{
+    "name": "otimista"
+}
+
+###
+# @name login
+POST http://localhost:3000/login HTTP/1.1
+Content-type: application/json
+
+{
+    "email": "nath@teste.com.br",
+    "password": "4321"
+}
+
+###
+
+POST http://localhost:3000/tags HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im5hdGhAdGVzdGUuY29tLmJyIiwiaWF0IjoxNjI0NjQ1MjU5LCJleHAiOjE2MjQ3MzE2NTksInN1YiI6ImU1NTUzNjY3LTgzZTItNGRhOS05OGRhLWFiMDYwZjFiODUxMyJ9.OGUQufF8Xhe_4zdleyez799MGhlLmpQRFV3DZckvFmA
+
+{
+    "name": "força"
+}
+
+###
+POST http://localhost:3000/compliments HTTP/1.1
+Content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im5hdGhAdGVzdGUuY29tLmJyIiwiaWF0IjoxNjI0NjQ1MjU5LCJleHAiOjE2MjQ3MzE2NTksInN1YiI6ImU1NTUzNjY3LTgzZTItNGRhOS05OGRhLWFiMDYwZjFiODUxMyJ9.OGUQufF8Xhe_4zdleyez799MGhlLmpQRFV3DZckvFmA
+
+{
+    "tag_id": "e94366ae-618a-4f3e-a21e-e67780b9c4bf",
+    "user_receiver": "583acde7-1511-4c47-8e1f-833c53ef8188",
+    "message": "Você é sensasional"
+}
+
+###
+# @name list_user_received_compliments
+
+GET http://localhost:3000/users/compliments/received HTTP/1.1
+Content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im5hdGhAdGVzdGUuY29tLmJyIiwiaWF0IjoxNjI0NjQ1MjU5LCJleHAiOjE2MjQ3MzE2NTksInN1YiI6ImU1NTUzNjY3LTgzZTItNGRhOS05OGRhLWFiMDYwZjFiODUxMyJ9.OGUQufF8Xhe_4zdleyez799MGhlLmpQRFV3DZckvFmA
+
+
+
+###
+# @name list_user_send_compliments
+
+GET http://localhost:3000/users/compliments/send HTTP/1.1
+Content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im5hdGhAdGVzdGUuY29tLmJyIiwiaWF0IjoxNjI0NjQ1MjU5LCJleHAiOjE2MjQ3MzE2NTksInN1YiI6ImU1NTUzNjY3LTgzZTItNGRhOS05OGRhLWFiMDYwZjFiODUxMyJ9.OGUQufF8Xhe_4zdleyez799MGhlLmpQRFV3DZckvFmA
+
+###
+# @name list_tags
+
+GET http://localhost:3000/tags HTTP/1.1
+Content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im5hdGhAdGVzdGUuY29tLmJyIiwiaWF0IjoxNjI0NjQ1MjU5LCJleHAiOjE2MjQ3MzE2NTksInN1YiI6ImU1NTUzNjY3LTgzZTItNGRhOS05OGRhLWFiMDYwZjFiODUxMyJ9.OGUQufF8Xhe_4zdleyez799MGhlLmpQRFV3DZckvFmA
+
+###
+# @name list_all_users
+
+GET http://localhost:3000/users HTTP/1.1
+Content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im5hdGhAdGVzdGUuY29tLmJyIiwiaWF0IjoxNjI0NjQ1MjU5LCJleHAiOjE2MjQ3MzE2NTksInN1YiI6ImU1NTUzNjY3LTgzZTItNGRhOS05OGRhLWFiMDYwZjFiODUxMyJ9.OGUQufF8Xhe_4zdleyez799MGhlLmpQRFV3DZckvFmA
